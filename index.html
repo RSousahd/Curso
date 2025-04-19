@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola do Mestre - Formação de Elite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #f0f0f0;
+      overflow-x: hidden;
+      font-size: 1.2rem;
+    }
+
+   /* Estilo para o cabeçalho com imagem de fundo de uma Bíblia */
+   header {
+            background-image: url('https://images.unsplash.com/photo-1575397354640-4437f9b804d1'); /* Substitua pela URL de uma imagem de Bíblia */
+            background-size: cover;
+            background-position: center;
+            padding: 7rem 2rem;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4rem;
+      color: #fff700;
+      text-shadow: 2px 2px #000;
+      animation: pulse 2s infinite ease-in-out, text3d 1s infinite;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-top: 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes text3d {
+      0% {
+        text-shadow: 1px 1px 0 #ffcc00, 2px 2px 0 #ffcc00, 3px 3px 0 #ffcc00;
+      }
+      50% {
+        text-shadow: 1px 1px 5px #ffcc00, 2px 2px 5px #ffcc00, 3px 3px 5px #ffcc00;
+      }
+      100% {
+        text-shadow: 1px 1px 0 #ffcc00, 2px 2px 0 #ffcc00, 3px 3px 0 #ffcc00;
+      }
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 0 2rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #00ffe5;
+      text-shadow: 1px 1px #000;
+    }
+
+    .section p, .section li {
+      font-size: 1.3rem;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "★ ";
+      color: gold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 4rem;
+      font-size: 1.5rem;
+      background: linear-gradient(to right, #ffcc00, #ff9900);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffcc00;
+    }
+
+    .footer {
+      background-color: #111;
+      color: #999;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      .section h2 {
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 1rem 0;
+      }
+    }
+
+    /* Estilos para o botão flutuante do WhatsApp */
+    .whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+
+    /* Estilo para os ícones de redes sociais */
+    .social-links {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      font-size: 2rem;
+      color: white;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ESCOLA DO MESTRE</h1>
+    <p>Uma Formação de Elite para Discípulos com Chamado. Desenvolva Sabedoria, Poder e Autoridade Espiritual como um Mestre da palavra, um exegeta</p>
+  </header>
+
+  <nav>
+    <a href="#propósito">Propósito</a>
+    <a href="#formação">Formação</a>
+    <a href="#exclusiva">Formação Exclusiva</a>
+    <a href="https://wa.me/5562993825844" target="_blank">Matricule-se</a>
+  </nav>
+
+  <section id="propósito" class="section">
+    <h2>🔥 Propósito</h2>
+    <p>Uma jornada de dois anos para formar <span class="highlight">líderes forjados no Fogo da Palavra</span>. Discípulos que andam em unção, revelação e conhecimento profundo das Escrituras e da cultura hebraica e cristã primitiva.</p>
+  </section>
+
+  <section id="formação" class="section">
+    <h2>📘 Estrutura da Formação</h2>
+    <ul>
+      <li>Módulo 1: Doutrina dos Apóstolos, Santidade e Fundamentos Eternos</li>
+      <li>Módulo 2: A Cultura Hebraica no Tempo de Yeshua (Jesus)</li>
+      <li>Módulo 3: Introdução ao Aramaico, Hebraico Bíblico e Manuscritos Antigos</li>
+      <li>Módulo 4: Exegese Profunda, Midrash e Princípios Rabínicos</li>
+      <li>Módulo 5: Livros Apócrifos, Pseudepígrafos e Referências Ocultas no NT</li>
+      <li>Módulo 6: Teologia Paulina, Mistérios de Cristo e Autoridade Espiritual</li>
+      <li>Módulo 7: Liderança Apostólica, Ética e Cura da Alma</li>
+      <li>Módulo 8: Guerra Espiritual, Intercessão Profética e o Fim dos Tempos</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5562993825844" target="_blank">Matricule-se Agora</a>
+  </section>
+
+  <section id="exclusiva" class="section">
+    <h2>💥 Formação Exclusiva</h2>
+    <p>A <span class="highlight">Escola do Mestre</span> oferece um programa intensivo e exclusivo de dois anos. Este programa inclui mentorias, desafios práticos e acesso a materiais secretos que garantirão sua formação de elite.</p>
+    <a class="btn" href="https://wa.me/5562993825844" target="_blank">Matricule-se Agora</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Escola do Mestre | Todos os direitos reservados</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/1AMwoyfmgA/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/chocmah?igsh=eGJiNDBoMHlvcGJw" target="_blank">Instagram</a>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5562993825844" target="_blank" class="whatsapp-btn" title="Fale conosco no WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  </a>
+  
+
+</body>
+</html>
